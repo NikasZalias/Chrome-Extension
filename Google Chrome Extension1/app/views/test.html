@@ -1,0 +1,29 @@
+﻿<head>
+    <base href="/">
+</head>
+<body ng-view>
+    <div>
+        <h1>Hello Angular!</h1>
+        <h2>{{message}}</h2>
+    </div>
+    <form class='form-horizontal' ng-controller="LoginController">
+        <h2> Log In </h2>
+        <div class='row form-group'>
+            <label for='username' class='control-label col-sm-2'> Username: </label>
+            <div class='col-sm-8'>
+                <input value="{{username}}" ng-model="user.username" type='text' name='username' class='form-control' required />
+            </div>
+        </div>
+        <div class='row form-group'>
+            <label for='password' class='control-label col-sm-2'> Password: </label>
+            <div class='col-sm-8'>
+                <input value="{{password}}" ng-model="user.password" type='password' name='password' class='form-control' required />
+            </div>
+        </div>
+        <div class='row form-group'>
+            <div class='col-sm-offset-2 col-sm-10'>
+                <button ng-click='login(user)' class='btn btn-primary'> Log In </button>
+            </div>
+        </div>
+    </form>
+</body>
